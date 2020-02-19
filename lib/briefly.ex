@@ -22,7 +22,7 @@ defmodule Briefly do
           | {:too_many_attempts, binary, pos_integer}
           | {:no_tmp, [binary]}
   def create(opts \\ []) do
-    GenServer.call(Briefly.Entry.server(), {:create, opts})
+    GenServer.call(Briefly.Entry.server(), {:create, opts}, Briefly.Config.timeout())
   end
 
   @doc """

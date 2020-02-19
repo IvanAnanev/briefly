@@ -7,6 +7,8 @@ defmodule Briefly.Config do
 
   def default_extname, do: get(:default_extname)
 
+  def timeout, do: get(:timeout)
+
   defp get(key) do
     Application.get_env(:briefly, key, [])
     |> List.wrap()

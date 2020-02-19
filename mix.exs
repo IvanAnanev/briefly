@@ -50,7 +50,8 @@ defmodule Briefly.Mixfile do
     [
       directory: [{:system, "TMPDIR"}, {:system, "TMP"}, {:system, "TEMP"}, "/tmp"],
       default_prefix: "briefly",
-      default_extname: ""
+      default_extname: "",
+      timeout: 5_000
     ]
   end
 end
